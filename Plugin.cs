@@ -1,5 +1,6 @@
 ﻿using BepInEx;
 using BepInEx.Logging;
+using BepInEx.Configuration;
 using HarmonyLib;
 using System.Reflection;
 using System.IO;
@@ -17,9 +18,15 @@ namespace CustomNameList
 
         internal static CustomNameService NameService = new CustomNameService(_namesFilePath);
 
+        internal static ConfigEntry<int> NameServiceRandomSeed;
+        internal static ConfigEntry<int> NameServiceLastIndex;
+
         private void Awake()
         {
             Log = base.Logger;
+
+            NameServiceRandomSeed = Config.Bind("customnamelist.meta", "NameServiceRandomSeed", 0, "");
+            NameServiceLastIndex = Config.Bind("customnamelist.meta", "NameServiceLastIndex", 0, "");
 
             NameService.Init();
 
