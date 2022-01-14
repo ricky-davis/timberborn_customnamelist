@@ -18,3 +18,12 @@ This mod is based on `BepInEx`. So you need to install that first: https://docs.
 [Download](https://github.com/thundersen/timberborn_customnamelist/releases) the latest release of the mod and place `CustomNameList.dll` in your BepinEx plugin folder.
 
 Place a `name.txt` file next to your `Timberborn.exe`.
+
+
+## Notes
+
+This mod was originally developed by [thundersen](https://github.com/thundersen/timberborn_customnamelist).
+
+This version is an update that simplifies the custom name implementation to use the system provided by the Timberborn devs, and as such, the name lists will persist across reloads within a save. 
+This means if you have 20 custom names, with 5 names from that list having already been used, and you restart Timberborn, you are now guaranteed to not get those 5 used names until the other 15 are given out.
+It also supports "Hot Reloading" the names list. Once the list of names is used up, it will recheck the names.txt file and load the newest list for immediate use without restarting Timberborn.
