@@ -16,7 +16,6 @@
     <PackageReference Include="BepInEx.PluginInfoProps" Version="1.1.0" />
     <PackageReference Include="UnityEngine.Modules" Version="2021.2.7" IncludeAssets="compile" />
     <PackageReference Include="Timberborn.GameLibs" Version="2021.12.17-r.0" />
-    <PackageReference Include="TimberAPI" Version="0.2.1" />
   </ItemGroup>
   
 
